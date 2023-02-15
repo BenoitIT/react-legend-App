@@ -1,0 +1,8 @@
+.page-loyout{
+    background-color: darkseagreen;
+    height:100vh;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

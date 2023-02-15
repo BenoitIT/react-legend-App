@@ -1,14 +1,13 @@
 .input-field{
-    margin: 2vh;
+    margin-bottom: 2vh;
     padding: auto;
    text-align: left;
-   margin-left: 10vw;
 }
 .text-input{
     height:5vh;
     width:25vw;
     background-color: transparent;
-    border: none;
+    border: 1px solid darkslategray;
     box-shadow: 0px 0.2px 0.5px 0px gray;
     margin-top: 1vh;
 }
@@ -21,5 +20,36 @@
 }
 label{
     opacity:70%;
-    padding-left:1vw;
+}
+.form-container{
+    background-color: white;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 10vh;
+    box-shadow: 2px 1px 1px 2px rgb(160, 194, 194);
+    border-radius: 1vh;
+}
+.submit-button{
+    background-color: darkseagreen;
+    color:white;
+    font-weight: 800;
+    width:20vw;
+    height: 5vh;
+    border: none;
+    border-radius: 1vh;
+    margin-top: 1vh;
+}
+.submit-button:hover{
+    background-color: darkslategray;
+    cursor: pointer;
+}
+h4{
+    letter-spacing: 0.1vh;
+    opacity:80%;
+}
+h5{
+    letter-spacing: 0.1vh;
+    opacity: 60%;
 }
