@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Card from "./Card";
-import splashTwo from "../images/splashtwo.jpg";
 import PageSection from "../section/PageSection";
-import blogTempData from "./Data";
 import axios from "axios";
 const CardListings = () => {
   const [blogs, setBlogs] = useState([]);

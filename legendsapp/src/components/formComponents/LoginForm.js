@@ -1,19 +1,35 @@
 import React ,{useState}from "react";
 import Input from "./Input";
 import SubmitButton from "./SubmitButton";
+import {useNavigate} from "react-router-dom"
+import axios from "axios";
 import './Input.css';
 const LoginForm = () => {
+  //states handlings
   const[email,setEmail]=useState('');
   const[password,setPassword]=useState('');
+  //state updating
   const handleEmailChange=(e)=>{
   setEmail(e.target.value)
   }
   const handlePasswordChange=(e)=>{
    setPassword(e.target.value)
   }
+  // navigating event  updating
+  const navigate=useNavigate();
+  // handle submission
   const handleSubmit=(e)=>{
-
-    alert('entered email is'+' '+email+'  '+'entered password is'+' '+password);
+    e.preventDefault();
+    axios.post('https://dead-jade-coypu-cape.cyclic.app/Api/admin/login',{
+      email,
+     password
+    }).then(response=>{alert(response.data.message)
+      if(response.data.data){
+       navigate('/read-blog')
+      }else{
+        navigate('/')
+      }
+    }).catch(error=>console.log(error));
   }
   return (
     <div className="form-container">
