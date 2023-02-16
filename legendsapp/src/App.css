@@ -2,38 +2,82 @@
   text-align: center;
   background-color: white;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page-view{
+  gap:4vw;
+  padding: 3vw;
+  background-image: linear-gradient(180deg, rgb(7, 48, 53), rgb(132, 139, 121),rgb(7, 48, 53));
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  border-radius: 1vh;
+  gap:4vw;
+  padding: 3vw;
+  background-image: linear-gradient(180deg, rgb(7, 48, 53), rgb(132, 139, 121),rgb(7, 48, 53));
 }
-
-.App-link {
-  color: #61dafb;
+/*single blog view styling*/
+.image-view{
+  width: 60vw;
+  height: 60vh;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 1vh;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.page-body{
+  width: 60vw;
+  text-align: left;
+}
+.page-body p{
+  font-size: 2.5vh;
+  line-height: 4vh;
+  margin-top: 4vh;
+  color:rgb(243, 246, 226);
+  opacity:80%;
+}
+.page-body h1{
+  font-size: 5vh;
+  opacity: 80%;
+  font-family:'Georgia, 'Times New Roman', Times, serif';
+  font-weight: bolder;
+  margin-bottom: 2vh;
+  color:rgb(242, 248, 213);
+  opacity: 80%;
+}
+@media(max-width:600px){
+ .page-container{
+  display: flex;
+  flex-direction: column-reverse;
+ }
+  .image-view{
+    width: 86vw;
+    height: 30vh;
   }
-  to {
-    transform: rotate(360deg);
+  .page-body p{
+    width: 90vw;
+    font-size: 1.6vh;
+    line-height: 3vh;
+  }
+  .page-body h1{
+  width: 80vw;
+  font-size: 2vh;
   }
 }
+@media only screen and (min-width: 624px) and (max-width: 1024px){
+  .page-container{
+    display: flex;
+    flex-direction: column-reverse;
+   }
+    .image-view{
+      width: 85vw;
+      height: 30vh;
+    }
+    .page-body p{
+      width: 85vw;
+      font-size: 1.6vh;
+      line-height: 3vh;
+    }
+    .page-body h1{
+    width: 80vw;
+    font-size: 3vh;
+    }
+  }

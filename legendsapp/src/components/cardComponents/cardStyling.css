@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+/*card styling*/
+.card{
+ margin: 1vh;
+  object-fit: cover;
+  box-shadow: 0.4px 0.5px 0.5px 1px rgb(215, 223, 223);
+  border-radius: 1vh;
+  position: relative;
+}
+.card h5{
+   font-size: 2.5vh;
+   letter-spacing: 0.2vw;
+   font-family:'sans-serif';
+   }
+.image-from-card{
+    width: 40vh;
+    height: 20vh;
+    border-radius: 1vh;
+}
+.image-from-card:hover{
+    opacity: 60%;
+    cursor: pointer;
+}
+.card-listings{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-start: 1;
+    justify-items: left;
+     overflow-x: scroll;
+}
+.card-text{
+    position: absolute;
+    z-index: 1;
+    top:5vh;
+    left:5vw;
+    color: black;
+    opacity: 80%;
+    font-size: 1.8vh;
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+}
+.card-text h4{
+    color: white;
+    margin-top:2vh;
+    font-size: 2.5vh;
+    font-weight:bolder;
+}
+.hide-text{
+    display: none;
+}
+/*card styling*/
+@media (max-width:600px){
+    .card{
+         object-fit: cover;
+         box-shadow: 0px 0.1px 0.2px 0.4px rgb(215, 223, 223);
+         width: 50vw;
+         height:15vh;
+       }
+    .card-listings{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap:0.5vw;
+        
+      
+    } 
+    .card h5{
+        font-size: 1.4vh;
+        letter-spacing: 0.1vw;
+        font-family:'sans-serif';
+        }
+     .image-from-card{
+         width: 50vw;
+         height:15vh;
+     }
+}
+@media only screen and (min-width: 624px) and (max-width: 1024px){
+    .card{
+        object-fit: cover;
+        box-shadow: 0px 0.1px 0.2px 0.4px rgb(215, 223, 223);
+      }
+   .card-listings{
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       grid-row-gap:0.5vw;
+       margin-right: 2vh;
+       object-fit: cover;
+   } 
+   .card h5{
+       font-size: 1.4vh;
+       letter-spacing: 0.1vw;
+       font-family:'sans-serif';
+       }
+    .image-from-card{
+        width:30vw;
+        height:15vh;
+    } 
+}
