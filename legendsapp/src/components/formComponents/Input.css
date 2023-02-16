@@ -1,3 +1,4 @@
+/*forms stylings*/
 .input-field{
     margin-bottom: 2vh;
     padding: auto;
@@ -52,4 +53,37 @@ h4{
 h5{
     letter-spacing: 0.1vh;
     opacity: 60%;
+}
+/*form responsiveness*/
+/*moblie screen*/
+@media (max-width: 600px) {
+    .text-input{
+        height:4vh;
+        width:90vw;
+    }
+    .form-container{
+      width: 100vw;  
+      padding: 2vh 2vh;
+    }
+    .submit-button{
+       width: 70vw;
+    }
+}
+/* ipad screen*/
+@media only screen and (min-width: 624px) and (max-width: 1024px){
+    .text-input{
+        height:5vh;
+        width:60vw;
+    }
+    .form-container{
+      width: 80vw;  
+      padding: 2vh 4vh;
+      height:60vh;
+    }
+    .submit-button{
+       width: 60vw;
+    }
+    h4{
+        font-size: 2vh;
+    }
 }
