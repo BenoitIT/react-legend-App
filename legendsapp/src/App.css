@@ -43,7 +43,24 @@
   color:rgb(242, 248, 213);
   opacity: 80%;
 }
+/* nava bar styling*/
+.navbar{
+  margin: 2vh;
+  display: flex;
+  justify-content:space-between
+}
+.navbar ul{
+  display: flex;
+  gap:4vw;
+}
+.navbar ul span{
+  color:wheat;
+  text-decoration: none;
+}
 @media(max-width:600px){
+  .navbar{
+    display: none;
+  }
  .page-container{
   display: flex;
   flex-direction: column-reverse;
@@ -63,6 +80,9 @@
   }
 }
 @media only screen and (min-width: 624px) and (max-width: 1024px){
+  .navbar{
+    display: none;
+  }
   .page-container{
     display: flex;
     flex-direction: column-reverse;

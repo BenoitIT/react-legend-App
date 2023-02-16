@@ -33,7 +33,7 @@ label{
     border-radius: 1vh;
 }
 .submit-button{
-    background-color: darkseagreen;
+    background-image: linear-gradient(180deg, rgb(159, 182, 185), rgb(132, 139, 121),rgb(84, 110, 113));
     color:white;
     font-weight: 800;
     width:20vw;
@@ -43,7 +43,7 @@ label{
     margin-top: 1vh;
 }
 .submit-button:hover{
-    background-color: darkslategray;
+    background-image: linear-gradient(180deg, rgb(70, 86, 88), rgb(168, 180, 147),rgb(9, 93, 106));
     cursor: pointer;
 }
 h4{

@@ -5,14 +5,13 @@ const Card = ({
   BlogTitle,
   BlogDescription,
   category,
-  showText,
-  show,
-  hideText,
+  handleChoice,
+  cardId
 }) => {
   return (
-    <div className="card" onMouseOver={showText} onMouseOut={hideText}>
+    <div className="card" onClick={()=>handleChoice(cardId)}>
       <h5>{BlogTitle}</h5>
-      <div className={show ? "card-text" : "hide-text"}>
+      <div className= "card-text">
         <h4>{category}</h4>
         <p>{BlogDescription}</p>
       </div>

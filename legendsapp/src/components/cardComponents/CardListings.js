@@ -1,62 +1,79 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "./Card";
-import splashone from "../images/splashone.jpg";
 import splashTwo from "../images/splashtwo.jpg";
-import splashThree from "../images/splash.jpg";
-import splashfour from "../images/splashfour.jpg";
 import PageSection from "../section/PageSection";
 import blogTempData from "./Data";
+import axios from "axios";
 const CardListings = () => {
-  const [displayTxt, setDscriptionText] = useState(false);
-  const handleMouseOver = () => {
-    setDscriptionText(true);
+  const [blogs, setBlogs] = useState([]);
+  const [clickedBlog, setClickedBlog] = useState();
+  const handleBlogView = (id) => {
+    setClickedBlog(id);
   };
-  const handleMouseOut = () => {
-    setDscriptionText(false);
-  };
+  console.log(clickedBlog);
+  useEffect(() => {
+    axios
+      .get("https://dead-jade-coypu-cape.cyclic.app/Api/blogs/all")
+      .then((response) => response)
+      .then((data) => setBlogs(data.data.data))
+      .catch((err) => console.log(err));
+  }, []);
   return (
-    <div className='page-container'>
-    <div className="card-listings">
-      <Card
-        imageSrc={splashone}
-        BlogTitle="blog title"
-        BlogDescription="we back in building"
-        category="sport"
-        showText={handleMouseOver}
-        show={displayTxt}
-        hideText={handleMouseOut}
-      />
-      <Card
-        imageSrc={splashTwo}
-        BlogTitle="blog title"
-        BlogDescription="we back in building"
-        category="music"
-        showText={handleMouseOver}
-        show={displayTxt}
-        hideText={handleMouseOut}
-      />
-      <Card
-        imageSrc={splashThree}
-        BlogTitle="blog title"
-        BlogDescription="we back in building"
-        category="art"
-        showText={handleMouseOver}
-        show={displayTxt}
-        hideText={handleMouseOut}
-      />
-      <Card
-        imageSrc={splashfour}
-        BlogTitle="blog title"
-        BlogDescription="we back in building"
-        category="politics"
-        showText={handleMouseOver}
-        show={displayTxt}
-        hideText={handleMouseOut}
-      />
-    </div>
-    <div>
-    <PageSection image={splashTwo} BlogDescription={blogTempData.description} blogTitle={blogTempData.tile}/>
-    </div>
+    <div className="page-container">
+      <div className="card-listings">
+        {blogs.length >= 1 ? (
+          blogs.map((blog) => {
+            return (
+              <Card
+                key={blog._id}
+                imageSrc={blog.blogImage}
+                BlogTitle={blog.title}
+                BlogDescription={blog.blogDescription.slice(0, 20)}
+                category={blog.category}
+                handleChoice={handleBlogView}
+                cardId={blog._id}
+              />
+            );
+          })
+        ) : blogs.length === 1 ? (
+          <Card
+            key={blogs._id}
+            imageSrc={blogs.blogImage}
+            BlogTitle={blogs.title}
+            BlogDescription={blogs.blogDescription.slice(0, 80)}
+            category={blogs.category}
+          />
+        ) : (
+          <Card
+            BlogTitle="no blog found"
+            BlogDescription="no blog description available"
+            category="no category available"
+          />
+        )}
+      </div>
+      <div>
+        {blogs.length > 1 ? (
+          blogs.map((blog) => {
+            if (blog._id === clickedBlog) {
+              return (
+                <PageSection
+                  image={blog.blogImage}
+                  BlogDescription={blog.blogDescription}
+                  blogTitle={blog.title}
+                />
+              );
+            }
+          })
+        ) : blogs.length === 1 || clickedBlog === null ? (
+          <PageSection
+            image={blogs[0].blogImage}
+            BlogDescription={blogs[0].blogDescription}
+            blogTitle={blogs[0].title}
+          />
+        ) : (
+          <PageSection blogTitle="no blog available" />
+        )}
+      </div>
     </div>
   );
 };
