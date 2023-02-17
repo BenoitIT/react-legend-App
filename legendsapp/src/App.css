@@ -58,6 +58,12 @@
   color:wheat;
   text-decoration: none;
 }
+h4 span{
+  color:rgb(243, 246, 226);
+  font-weight: bold;
+  font-size: small;
+  padding-right: 1vw;
+}
 @media(max-width:600px){
   .navbar{
     display: none;

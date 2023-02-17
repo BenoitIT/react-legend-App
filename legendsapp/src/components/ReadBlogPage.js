@@ -1,10 +1,10 @@
 import React from 'react';
 import CardListings from './cardComponents/CardListings';
 import Navbar from './Navbar';
-const ReadBlogPage = () => {
+const ReadBlogPage = ({username}) => {
     return (
         <div className='page-view'>
-            <Navbar/>
+            <Navbar username={username}/>
            <CardListings/> 
         </div>
     );

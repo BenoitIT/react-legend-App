@@ -44,7 +44,7 @@ const SignupForm = () => {
     return (
     <div className="form-container">
       <div className="form-Heading">
-      <div class={submit?"loading":"loader"}>Loading...</div>
+      <div className={submit?"loading":"loader"}>Loading...</div>
         <h4>fill the form to your account</h4>
       </div>
       <div className="formBody">

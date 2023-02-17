@@ -41,7 +41,7 @@ const LoginForm = () => {
   return (
     <div className="form-container">
       <div className="form-Heading">
-      <div class={submit?"loading":"loader"}>Loading...</div>
+      <div className={submit?"loading":"loader"}>Loading...</div>
         <h4>sign up to your account</h4>
       </div>
       <div className="formBody">

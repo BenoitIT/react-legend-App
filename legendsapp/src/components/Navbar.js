@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import nav from "./navbarSrc/Links";
-const Navbar = () => {
+const Navbar = ({ username }) => {
   return (
     <div className="navbar">
       <h1>Benn-Dev</h1>
@@ -17,8 +17,20 @@ const Navbar = () => {
             </Link>
           );
         })}
+        {username ? 
+          <Link to="/logout" style={{ textDecoration: "none" }}>
+            <span>logout</span>
+          </Link>
+        : 
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <span>login</span>
+          </Link>
+        }
       </ul>
-      <h4>guest</h4>
+      <h4>
+        <span>welcome</span>
+        {username}
+      </h4>
     </div>
   );
 };

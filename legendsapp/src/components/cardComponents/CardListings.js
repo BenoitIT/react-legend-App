@@ -23,7 +23,7 @@ const CardListings = () => {
   return (
     <div className="page-container">
       <div className="card-listings">
-      <div class={load?"loading":"loader"}>Loading...</div>
+      <div className={load?"loading":"loader"}>Loading...</div>
         {blogs.length >= 1 ? (
           blogs.map((blog) => {
             return (
