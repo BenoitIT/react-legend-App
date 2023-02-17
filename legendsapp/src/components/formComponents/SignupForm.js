@@ -9,6 +9,7 @@ const SignupForm = () => {
   const[password,setPassword]=useState('');
   const[userName,setUsername]=useState('');
   const[confirmPassword,setConfirmed]=useState('');
+  const [submit,setSubmit]=useState(null)
   //state updating
   const handleEmailChange=(e)=>{
     setEmail(e.target.value)
@@ -25,6 +26,7 @@ const SignupForm = () => {
     //event handling
     const handleSubmit=(e)=>{
       e.preventDefault();
+      setSubmit(true)
       if(password!==confirmPassword){
       alert('your password is not confirmed');
      }else{
@@ -32,12 +34,17 @@ const SignupForm = () => {
         userName,
         email,
        password
-      }).then(response=>alert(response.data.message)).catch(error=>console.log(error));
+      }).then(response=>{
+        setSubmit(false)
+        alert(response.data.message)}).catch(error=>{
+          setSubmit(false)
+          alert(error.message)});
      }
     }
     return (
     <div className="form-container">
       <div className="form-Heading">
+      <div class={submit?"loading":"loader"}>Loading...</div>
         <h4>fill the form to your account</h4>
       </div>
       <div className="formBody">

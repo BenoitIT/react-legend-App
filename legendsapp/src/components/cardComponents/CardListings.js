@@ -2,23 +2,28 @@ import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import PageSection from "../section/PageSection";
 import axios from "axios";
+import '../authForms.css';
 const CardListings = () => {
   const [blogs, setBlogs] = useState([]);
   const [clickedBlog, setClickedBlog] = useState();
+  const [load,setLoad]=useState(null)
   const handleBlogView = (id) => {
     setClickedBlog(id);
   };
-  console.log(clickedBlog);
   useEffect(() => {
+    setLoad(true)
     axios
       .get("https://dead-jade-coypu-cape.cyclic.app/Api/blogs/all")
       .then((response) => response)
-      .then((data) => setBlogs(data.data.data))
+      .then((data) => {
+        setLoad(false)
+        setBlogs(data.data.data)})
       .catch((err) => console.log(err));
   }, []);
   return (
     <div className="page-container">
       <div className="card-listings">
+      <div class={load?"loading":"loader"}>Loading...</div>
         {blogs.length >= 1 ? (
           blogs.map((blog) => {
             return (
