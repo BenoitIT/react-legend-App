@@ -3,7 +3,7 @@ import Card from "./Card";
 import PageSection from "../section/PageSection";
 import axios from "axios";
 import '../authForms.css';
-const CardListings = () => {
+const CardListings = ({username,token}) => {
   const [blogs, setBlogs] = useState([]);
   const [clickedBlog, setClickedBlog] = useState();
   const [load,setLoad]=useState(null)
@@ -60,9 +60,13 @@ const CardListings = () => {
             if (blog._id === clickedBlog) {
               return (
                 <PageSection
+                 key={blog._id}
                   image={blog.blogImage}
                   BlogDescription={blog.blogDescription}
                   blogTitle={blog.title}
+                  username={username}
+                  id={blog._id}
+                  token={token}
                 />
               );
             }
@@ -72,6 +76,9 @@ const CardListings = () => {
             image={blogs[0].blogImage}
             BlogDescription={blogs[0].blogDescription}
             blogTitle={blogs[0].title}
+            username={username}
+            id={blogs[0]._id}
+            token={token}
           />
         ) : (
           <PageSection blogTitle="no blog available" />

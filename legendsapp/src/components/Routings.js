@@ -24,8 +24,8 @@ const Routings = () => {
           <Routes>
             <Route path="/" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
-              <Route path="/read-blog" element={<ReadBlogPage username={username}/>} />:
-            
+            {username&&token&&status!==400?<Route path="/read-blog" element={<ReadBlogPage username={username} token={token}/>} />:
+            <Route path="/read-blog" element={<LoginPage username={username}/>} />} 
           </Routes>
       </BrowserRouter>
   );

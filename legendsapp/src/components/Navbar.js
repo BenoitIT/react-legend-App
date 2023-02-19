@@ -1,7 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import nav from "./navbarSrc/Links";
 const Navbar = ({ username }) => {
+  const navigate=useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate('/')
+    window.location.reload();
+  };
   return (
     <div className="navbar">
       <h1>Benn-Dev</h1>
@@ -18,8 +24,8 @@ const Navbar = ({ username }) => {
           );
         })}
         {username ? 
-          <Link to="/logout" style={{ textDecoration: "none" }}>
-            <span>logout</span>
+          <Link  style={{ textDecoration: "none" }}>
+            <span onClick={handleLogout}>logout</span>
           </Link>
         : 
           <Link to="/" style={{ textDecoration: "none" }}>

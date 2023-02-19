@@ -19,6 +19,7 @@ const LoginForm = () => {
   // navigating event  updating
   const navigate=useNavigate();
   // handle submission
+  const refresh = () => window.location.reload(true)
   const handleSubmit=(e)=>{
     e.preventDefault();
     setSubmit(true)
@@ -28,9 +29,10 @@ const LoginForm = () => {
     }).then(response=>{alert(response.data.message);
       setSubmit(false)
       if(response.data.data){
-       navigate('/read-blog')
-       localStorage.setItem("user",JSON.stringify(response.data));
-       localStorage.setItem("status",JSON.stringify(response.status));
+        localStorage.setItem("user",JSON.stringify(response.data));
+        localStorage.setItem("status",JSON.stringify(response.status));
+        navigate('/read-blog');
+        refresh();
       }else{
         navigate('/')
       }
