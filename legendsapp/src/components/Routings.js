@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import SignupPage from './SignupPage';
 import LoginPage from './LoginPage';
 import ReadBlogPage from './ReadBlogPage';
+import { UserContext } from './contexts/UserContext';
 
 const Routings = () => {
   //validate the routes over current state
@@ -21,12 +22,14 @@ const Routings = () => {
   },[]);
   return (
       <BrowserRouter>
-          <Routes>
+           <UserContext.Provider value={{username,token}}>
+            <Routes>
             <Route path="/" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
-            {username&&token&&status!==400?<Route path="/read-blog" element={<ReadBlogPage username={username} token={token}/>} />:
-            <Route path="/read-blog" element={<LoginPage username={username}/>} />} 
-          </Routes>
+            {username&&token&&status!==400?<Route path="/read-blog" element={<ReadBlogPage/>} />:
+            <Route path="/read-blog" element={<LoginPage/>} />} 
+            </Routes>
+            </UserContext.Provider>
       </BrowserRouter>
   );
 };

@@ -9,11 +9,12 @@
   background-image: linear-gradient(180deg, rgb(7, 48, 53), rgb(132, 139, 121),rgb(7, 48, 53));
 }
 .page-container{
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns:  1fr 2fr;
+  grid-template-areas: (1fr,3fr);
   border-radius: 1vh;
-  gap:4vw;
-  padding: 3vw;
+  gap:1vw;
+  padding: 2vw;
   background-image: linear-gradient(180deg, rgb(7, 48, 53), rgb(132, 139, 121),rgb(7, 48, 53));
 }
 /*single blog view styling*/
@@ -43,6 +44,15 @@
   margin-bottom: 2vh;
   color:rgb(242, 248, 213);
   opacity: 80%;
+}
+.page-body small{
+  font-size: 1.5vh;
+  opacity: 80%;
+  color:antiquewhite
+}
+.page-body small:hover{
+  cursor: pointer;
+  color: beige;
 }
 /* nava bar styling*/
 .navbar{

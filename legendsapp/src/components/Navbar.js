@@ -1,13 +1,15 @@
-import React from "react";
+import React,{useContext}from "react";
+import { UserContext } from "./contexts/UserContext";
 import { Link ,useNavigate} from "react-router-dom";
 import nav from "./navbarSrc/Links";
-const Navbar = ({ username }) => {
+const Navbar = () => {
   const navigate=useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("user");
     navigate('/')
     window.location.reload();
   };
+  const{username} =useContext(UserContext)
   return (
     <div className="navbar">
       <h1>Benn-Dev</h1>

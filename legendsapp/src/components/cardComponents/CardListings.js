@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,useContext} from "react";
 import Card from "./Card";
 import PageSection from "../section/PageSection";
 import axios from "axios";
 import '../authForms.css';
-const CardListings = ({username,token}) => {
+const CardListings = () => {
   const [blogs, setBlogs] = useState([]);
   const [clickedBlog, setClickedBlog] = useState();
   const [load,setLoad]=useState(null)
@@ -22,8 +22,10 @@ const CardListings = ({username,token}) => {
   }, []);
   return (
     <div className="page-container">
-      <div className="card-listings">
       <div className={load?"loading":"loader"}>Loading...</div>
+    <div>
+      <div className="card-listings">
+      
         {blogs.length >= 1 ? (
           blogs.map((blog) => {
             return (
@@ -54,6 +56,7 @@ const CardListings = ({username,token}) => {
           />
         )}
       </div>
+    </div>
       <div>
         {blogs.length > 1 ? (
           blogs.map((blog) => {
@@ -64,9 +67,7 @@ const CardListings = ({username,token}) => {
                   image={blog.blogImage}
                   BlogDescription={blog.blogDescription}
                   blogTitle={blog.title}
-                  username={username}
                   id={blog._id}
-                  token={token}
                 />
               );
             }
@@ -76,9 +77,7 @@ const CardListings = ({username,token}) => {
             image={blogs[0].blogImage}
             BlogDescription={blogs[0].blogDescription}
             blogTitle={blogs[0].title}
-            username={username}
             id={blogs[0]._id}
-            token={token}
           />
         ) : (
           <PageSection blogTitle="no blog available" />
