@@ -3,11 +3,10 @@ import Comment from "../cardComponents/Comment";
 import Input from "../formComponents/Input";
 import SubmitButton from "../formComponents/SubmitButton";
 import '../authForms.css';
-import axios from "axios";
 const PageSection = ({ image, BlogDescription, blogTitle, username, id,token}) => {
   const [comment, setComment] = useState("");
   const [submit, setSubmit] = useState(null);
-  const [commentList, setCommentList] = useState();
+  const [commentList, setCommentList] = useState([]);
   //state comment value copturing
   const handleCommentChange = (e) => {
     setComment(e.target.value);
@@ -68,10 +67,9 @@ useEffect(()=>{
         <SubmitButton value="comment" handleSubmit={handleSubmit} />
       </div>
       <b>comments..</b>
-      {commentList&& commentList.length>1?commentList.map(comm=>{
-        console.log(comm.comment);
-       <Comment usernam={username} comment={comm.comment}/>
-      }):<Comment usernam={username} comment="no comment"/>}
+      {commentList.map(comm=>{
+      return <Comment key={comm._id} usernam={username} comment={comm.comment}/>
+      })}
     </div>
   );
 };

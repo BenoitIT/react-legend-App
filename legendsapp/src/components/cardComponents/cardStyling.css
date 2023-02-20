@@ -110,6 +110,23 @@
          width: 50vw;
          height:15vh;
      }
+     .comment-card p{
+        font-size: 1.5vh;
+        margin-top: 0.2vh;
+        margin-left: -30vw;
+    }
+    .comment-card h6{
+        font-size: 2vh;
+        margin-left: -10vh;
+    }
+    .comment-card small{
+        font-size: 1.2vh;
+        margin-left: -8vh;
+    }
+    .comment-card{
+        width:50vw;
+        height: 7vh;
+    }
 }
 @media only screen and (min-width: 624px) and (max-width: 1024px){
     .card{
@@ -132,4 +149,21 @@
         width:30vw;
         height:15vh;
     } 
+    .comment-card p{
+        font-size: 1.5vh;
+        margin-top: 0.2vh;
+        margin-left: -30vw;
+    }
+    .comment-card h6{
+        font-size: 2vh;
+        margin-left: -20vh;
+    }
+    .comment-card small{
+        font-size: 1.2vh;
+        margin-left: -15vh;
+    }
+    .comment-card{
+        width:50vw;
+        height: 7vh;
+    }
 }
