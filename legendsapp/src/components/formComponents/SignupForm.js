@@ -48,11 +48,11 @@ const SignupForm = () => {
         <h4>fill the form to your account</h4>
       </div>
       <div className="formBody">
-        <Input type="text" placeholder="enter your name" label="Username" handleInput={handleUsernameChange}/>
-        <Input type="text" placeholder="enter your email"  label="Email" handleInput={handleEmailChange}/>
-        <Input type="password" placeholder="enter your password" label="Password" handleInput={handlePasswordChange}/>
-        <Input type="password" placeholder="enter your confirm password" label="Confirm Password" handleInput={handleconfirmPswdChange}/>
-        <SubmitButton value="sign up" handleSubmit={handleSubmit}/>
+        <Input type="text" placeholder="enter your name" label="Username" handleInput={handleUsernameChange} className="text-input"/>
+        <Input type="text" placeholder="enter your email"  label="Email" handleInput={handleEmailChange} className="text-input"/>
+        <Input type="password" placeholder="enter your password" label="Password" handleInput={handlePasswordChange} className="text-input"/>
+        <Input type="password" placeholder="enter your confirm password" label="Confirm Password" handleInput={handleconfirmPswdChange} className="text-input"/>
+        <SubmitButton value="sign up" handleSubmit={handleSubmit} className='submit-button'/>
       </div>
     </div>
     );

@@ -1,10 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import nav from "./navbarSrc/Links";
-const Navbar = ({ username }) => {
+import React,{useContext}from "react";
+import { UserContext } from "./contexts/UserContext";
+import { Link ,useNavigate} from "react-router-dom";
+import {nav}from "./navbarSrc/Links";
+const Navbar = ({homeLinks}) => {
+  const navigate=useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate('/')
+    window.location.reload();
+  };
+  const{username} =useContext(UserContext)
   return (
     <div className="navbar">
-      <h1>Benn-Dev</h1>
+      <h1 className="logo">Benn-Dev</h1>
       <ul>
         {nav.map((item) => {
           return (
@@ -13,16 +21,16 @@ const Navbar = ({ username }) => {
               to={item.path}
               style={{ textDecoration: "none" }}
             >
-              <span>{item.linkname}</span>
+              <span className={homeLinks}>{item.linkname}</span>
             </Link>
           );
         })}
         {username ? 
-          <Link to="/logout" style={{ textDecoration: "none" }}>
-            <span>logout</span>
+          <Link  style={{ textDecoration: "none" }}>
+            <span onClick={handleLogout}>logout</span>
           </Link>
         : 
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/login" style={{ textDecoration: "none" }}>
             <span>login</span>
           </Link>
         }

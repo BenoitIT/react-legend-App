@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,useContext} from "react";
 import Card from "./Card";
 import PageSection from "../section/PageSection";
 import axios from "axios";
@@ -22,8 +22,10 @@ const CardListings = () => {
   }, []);
   return (
     <div className="page-container">
-      <div className="card-listings">
       <div className={load?"loading":"loader"}>Loading...</div>
+    <div>
+      <div className="card-listings">
+      
         {blogs.length >= 1 ? (
           blogs.map((blog) => {
             return (
@@ -54,15 +56,18 @@ const CardListings = () => {
           />
         )}
       </div>
+    </div>
       <div>
         {blogs.length > 1 ? (
           blogs.map((blog) => {
             if (blog._id === clickedBlog) {
               return (
                 <PageSection
+                 key={blog._id}
                   image={blog.blogImage}
                   BlogDescription={blog.blogDescription}
                   blogTitle={blog.title}
+                  id={blog._id}
                 />
               );
             }
@@ -72,6 +77,7 @@ const CardListings = () => {
             image={blogs[0].blogImage}
             BlogDescription={blogs[0].blogDescription}
             blogTitle={blogs[0].title}
+            id={blogs[0]._id}
           />
         ) : (
           <PageSection blogTitle="no blog available" />
