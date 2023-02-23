@@ -2,6 +2,7 @@
   text-align: center;
   background-image: linear-gradient(180deg, rgb(7, 48, 53), rgb(132, 139, 121),rgb(7, 48, 53));
   height:100vh;
+  position: relative;
 }
 .page-view{
   gap:4vw;
@@ -67,6 +68,17 @@
 .navbar ul span{
   color:wheat;
   text-decoration: none;
+}
+.navbar ul .homeLinks{
+  color:rgb(0,48, 53);
+  opacity: 70%;
+}
+.navbar ul .homeLinks:hover{
+  font-weight: bolder;
+}
+.logo{
+  color:rgb(0,48, 53);
+  font-size: 6vh;
 }
 h4 span{
   color:rgb(243, 246, 226);

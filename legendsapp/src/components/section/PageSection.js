@@ -74,8 +74,9 @@ const PageSection = ({ image, BlogDescription, blogTitle,id,}) => {
           placeholder="type a comment here"
           handleInput={handleCommentChange}
           value={comment}
+          className="text-input"
         />
-        <SubmitButton value="comment" handleSubmit={handleSubmit} />
+        <SubmitButton value="comment" handleSubmit={handleSubmit} className='submit-button' />
       </div>
       <b>comments..</b>
       {commentList.map(comm=>{

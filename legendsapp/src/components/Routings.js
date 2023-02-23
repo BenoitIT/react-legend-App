@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import SignupPage from './SignupPage';
 import LoginPage from './LoginPage';
 import ReadBlogPage from './ReadBlogPage';
+import LandingPage from './cardComponents/LandingPage';
 import { UserContext } from './contexts/UserContext';
 
 const Routings = () => {
@@ -24,8 +25,10 @@ const Routings = () => {
       <BrowserRouter>
            <UserContext.Provider value={{username,token}}>
             <Routes>
-            <Route path="/" element={<LoginPage />} />
+            <Route path="/" element={<LandingPage />} />
             <Route path="/signup" element={<SignupPage />} />
+            <Route path="/home" element={<LandingPage />} />
+            <Route path="/login" element={<LoginPage/>} />
             {username&&token&&status!==400?<Route path="/read-blog" element={<ReadBlogPage/>} />:
             <Route path="/read-blog" element={<LoginPage/>} />} 
             </Routes>
