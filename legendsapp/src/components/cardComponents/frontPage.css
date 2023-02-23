@@ -82,12 +82,20 @@
     .hero-barner{
         width: 90vw;
     }
+
+      .hero-barner .intro .salitation{
+        width: 90vw;
+    }
     .hero-barner .description-paragrph{
         font-size: 1.3vh;
         line-height: 2vh;
         width: 95vw;
     }
+    .img-container{
+        
+    }
     .profile-image{
         width: 100vw;
-        opacity: 90%;}
+        opacity: 90%;
+      }
   }
