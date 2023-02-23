@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-legend-App/static/css/main.7ec3fcc4.css",
-    "main.js": "/react-legend-App/static/js/main.bcc12f5e.js",
+    "main.css": "/react-legend-App/static/css/main.f84f86b4.css",
+    "main.js": "/react-legend-App/static/js/main.23f896d5.js",
     "static/js/787.7cb1e26f.chunk.js": "/react-legend-App/static/js/787.7cb1e26f.chunk.js",
     "static/media/benimg.png": "/react-legend-App/static/media/benimg.b3131e61bf5b3c275c9f.png",
     "index.html": "/react-legend-App/index.html",
-    "main.7ec3fcc4.css.map": "/react-legend-App/static/css/main.7ec3fcc4.css.map",
-    "main.bcc12f5e.js.map": "/react-legend-App/static/js/main.bcc12f5e.js.map",
+    "main.f84f86b4.css.map": "/react-legend-App/static/css/main.f84f86b4.css.map",
+    "main.23f896d5.js.map": "/react-legend-App/static/js/main.23f896d5.js.map",
     "787.7cb1e26f.chunk.js.map": "/react-legend-App/static/js/787.7cb1e26f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ec3fcc4.css",
-    "static/js/main.bcc12f5e.js"
+    "static/css/main.f84f86b4.css",
+    "static/js/main.23f896d5.js"
   ]
 }
