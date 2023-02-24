@@ -3,7 +3,7 @@ import React from 'react';
 import About from '../banners/About';
 const AboutPage = () => {
     return (
-     <div className='aboutPage'>
+     <div className='aboutPage' id="about">
       <About/>
     </div>
     );

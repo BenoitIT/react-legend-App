@@ -61,38 +61,40 @@
   color: beige;
 }
 /* nava bar styling*/
+.header-container{
+  padding: 4vw;
+  position: sticky;
+  top:2vh;
+  z-index:4;
+}
 .navbar{
-  margin: 2vh;
   display: flex;
   justify-content:space-between;
-  position: fixed;
   z-index: 3;
 }
 .navbarscrolled{
   margin: 2vh;
+  height: 10vh;
   display: flex;
   justify-content:space-between;
-  position: fixed;
   z-index: 3;
   background-color: yellow;
   
 }
-.navbar ul{
+.navbarscrolled ul,.navbar ul{
   display: flex;
   gap:4vw;
-  position: fixed;
-  left:30vw;
   z-index: 3;
 }
-.navbar ul span{
+.navbarscrolled ul span,.navbar ul span{
   color:wheat;
   text-decoration: none;
 }
-.navbar ul .homeLinks{
+.navbarscrolled ul .homeLinks,.navbar ul .homeLinks{
   color:rgb(0,48, 53);
   opacity: 70%;
 }
-.navbar ul .homeLinks:hover{
+.navbarscrolled ul .homeLinks:hover,.navbar ul .homeLinks:hover{
   font-weight: bolder;
 }
 .logo{
@@ -107,7 +109,6 @@ h4 span{
   font-weight: bold;
   font-size: small;
   padding-right: 1vw;
-  position: fixed;
   left:90vw;
   z-index: 3;
 }

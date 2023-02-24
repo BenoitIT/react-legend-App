@@ -1,14 +1,17 @@
 import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
-import LoginPage from "./components/LoginPage";
-import SignupPage from "./components/SignupPage";
+import React,{useState} from "react";
 import Routings from "./components/Routings";
-import CardListings from "./components/cardComponents/CardListings";
 function App() {
+  const [scrollTop, setScrollTop] = useState(0);
+
+  const handleScroll = (event) => {
+    setScrollTop(event.currentTarget.scrollTop);
+    console.log(scrollTop);
+  };
   return (
    
-    <div className="App">
-      <Routings/>
+    <div className="App" onScroll={handleScroll}>
+      <Routings scrollsensor={scrollTop}/>
     </div>
   );
 }
