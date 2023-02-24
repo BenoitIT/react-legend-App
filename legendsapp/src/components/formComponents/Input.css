@@ -90,12 +90,20 @@ h5{
         height:4vh;
         width:90vw;
     }
+    .fronpage-text-input{
+        height:4vh;
+        width:40vw;
+    }
     .form-container{
       width: 100vw;  
       padding: 2vh 2vh;
     }
     .submit-button{
        width: 70vw;
+    }
+    .frontpage-button{
+        width: 30vw; 
+        height:4vh;
     }
 }
 /* ipad screen*/

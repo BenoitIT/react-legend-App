@@ -3,6 +3,11 @@
   background-image: linear-gradient(180deg, rgb(7, 48, 53), rgb(132, 139, 121),rgb(7, 48, 53));
   height:100vh;
   position: relative;
+  overflow-y: scroll;
+}
+.pagelist{
+  display: flex;
+  flex-direction: column;
 }
 .page-view{
   gap:4vw;
@@ -59,11 +64,25 @@
 .navbar{
   margin: 2vh;
   display: flex;
-  justify-content:space-between
+  justify-content:space-between;
+  position: fixed;
+  z-index: 3;
+}
+.navbarscrolled{
+  margin: 2vh;
+  display: flex;
+  justify-content:space-between;
+  position: fixed;
+  z-index: 3;
+  background-color: yellow;
+  
 }
 .navbar ul{
   display: flex;
   gap:4vw;
+  position: fixed;
+  left:30vw;
+  z-index: 3;
 }
 .navbar ul span{
   color:wheat;
@@ -77,14 +96,20 @@
   font-weight: bolder;
 }
 .logo{
-  color:rgb(0,48, 53);
+  color:rgb(5, 83, 91);
+  opacity:90%;
   font-size: 6vh;
+  margin-top: -2.5vh;
+  text-shadow: 2px 2px 2px green;
 }
 h4 span{
   color:rgb(243, 246, 226);
   font-weight: bold;
   font-size: small;
   padding-right: 1vw;
+  position: fixed;
+  left:90vw;
+  z-index: 3;
 }
 @media(max-width:600px){
   .navbar{

@@ -4,6 +4,7 @@ import SignupPage from './SignupPage';
 import LoginPage from './LoginPage';
 import ReadBlogPage from './ReadBlogPage';
 import LandingPage from './cardComponents/LandingPage';
+import PageList from './pages/PageList';
 import { UserContext } from './contexts/UserContext';
 
 const Routings = () => {
@@ -22,10 +23,10 @@ const Routings = () => {
     }
   },[]);
   return (
-      <BrowserRouter>
+      <BrowserRouter basename="/react-legend-App">
            <UserContext.Provider value={{username,token}}>
             <Routes>
-            <Route path="/" element={<LandingPage />} />
+            <Route path="/" element={<PageList />} />
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/home" element={<LandingPage />} />
             <Route path="/login" element={<LoginPage/>} />

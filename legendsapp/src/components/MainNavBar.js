@@ -1,8 +1,9 @@
-import React,{useContext}from "react";
+import React,{useContext,useEffect,useState}from "react";
 import { UserContext } from "./contexts/UserContext";
 import { Link ,useNavigate} from "react-router-dom";
 import {mainNav}from "./navbarSrc/Links";
 const MainNavBar = ({homeLinks}) => {
+ //navigation hook
   const navigate=useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("user");
@@ -12,7 +13,7 @@ const MainNavBar = ({homeLinks}) => {
   const{username} =useContext(UserContext)
   return (
     <div className="navbar">
-      <h1>Benn-Dev</h1>
+      <h1 className="logo">Benn-Dev</h1>
       <ul>
         {mainNav.map((item) => {
           return (

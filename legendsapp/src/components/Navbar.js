@@ -3,6 +3,7 @@ import { UserContext } from "./contexts/UserContext";
 import { Link ,useNavigate} from "react-router-dom";
 import {nav}from "./navbarSrc/Links";
 const Navbar = ({homeLinks}) => {
+  //navigation bar
   const navigate=useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("user");
@@ -12,7 +13,7 @@ const Navbar = ({homeLinks}) => {
   const{username} =useContext(UserContext)
   return (
     <div className="navbar">
-      <h1 className="logo">Benn-Dev</h1>
+      <h1>Benn-Dev</h1>
       <ul>
         {nav.map((item) => {
           return (
