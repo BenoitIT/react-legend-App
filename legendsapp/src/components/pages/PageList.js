@@ -5,7 +5,7 @@ import MainNavBar from '../MainNavBar';
 const PageList = ({scroll}) => {
     return (
         <div className='pagelist'>
-          <div className="header-container">
+          <div className={scroll>0?"header-container scrolled-header-container":"header-container"}>
             <MainNavBar scrollStatus={scroll}/>
             </div>
           <LandingPage/>

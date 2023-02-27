@@ -5,7 +5,7 @@ import Address from './aboutsubComponents/Address';
 import Skills from './aboutsubComponents/Skills';
 import Contact from './aboutsubComponents/Contact';
 const About = () => {
-    const [display,setDisplay]=useState(2);
+    const [display,setDisplay]=useState(1);
     const handleClickMe=()=>{
         setDisplay(1);
     }
