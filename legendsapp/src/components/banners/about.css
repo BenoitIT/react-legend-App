@@ -77,10 +77,44 @@
      left: 3vw;
      top: -6vh;
      background-image:linear-gradient(140deg,azure,whitesmoke,whitesmoke,rgb(135, 160, 162),whitesmoke);
-     height: 95vh;
+     height: 80vh;
      border-radius: 1vh;
      box-shadow: 0px 40px 0px 0px rgb(29, 62, 62);
    }
    .leftBtn{
     margin-left: -20vw;
    }
+   /*mobile view*/
+   @media(max-width:600px){
+    .aboutPage{
+        position: relative;
+         width:100vw;
+         left: 3vw;
+         top: -2vh;
+       }
+    .about-Container{
+        display: block;
+        margin-top: 10vh;
+    }
+    .about-image{
+     display: none;
+    }
+    .aboutNav div{
+        width:32vw;
+        padding-top:1vh;
+    }
+    .addess-dscript .intro{
+        font-size: 2vh;
+        width: 80vw;
+    }
+    .titles b ,.titles p ,.complements b ,.complements p{
+   margin-bottom: 0.2vh;
+   font-size: 2vh;
+}
+.leftBtn{
+    margin-left: -10vw;
+    margin-top: 5vh;
+   }
+   }
+    
+   

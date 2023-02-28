@@ -84,7 +84,7 @@
         opacity:80%;
     }
     .work{
-        color:wheat;
+        color:rgb(30, 19, 3);
     }
     .hero-barner .intro{
         line-height: 3.4vh;
@@ -94,7 +94,7 @@
       }
       .hero-barner .my-names{
         font-size: 3vh;
-        color:rgb(61, 40, 2);
+        color:rgb(35, 35, 34);
       }
     .profile-container{
         position: absolute;
@@ -102,6 +102,7 @@
         left: 0vw;
         display: flex;
         flex-direction:column-reverse;
+        background-image:linear-gradient(140deg,azure,whitesmoke,whitesmoke,rgb(159, 192, 195),whitesmoke);
         width: 100vw;
     }
     .hero-barner{
@@ -109,13 +110,13 @@
     }
       .hero-barner .intro .salitation{
         width: 90vw;
-        color:rgb(129, 85, 4);
+        color:rgb(31, 21, 3);
     }
     .hero-barner .description-paragrph{
         font-size: 1.5vh;
         line-height: 2vh;
         width: 95vw;
-        color:wheat;
+        color:rgb(31, 29, 25);
     }
     .img-container{
         width: 100vw;
@@ -132,6 +133,7 @@
       .simple-form{
         display:flex;
        justify-content:center;
+       padding-bottom: 5vh;
     }
   }
  

@@ -3,7 +3,7 @@ import "./skill.css";
 const Skills = () => {
   return (
     <div className="skills-container">
-      <div className="wrapper">
+      <div className="addess-dscript">
       <p className='intro'>I characterize functional programming as a radical and elegant 
                 attack on the whole enterprise of writing programs</p>
       </div>
