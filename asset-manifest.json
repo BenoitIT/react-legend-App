@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-legend-App/static/css/main.31a585d7.css",
-    "main.js": "/react-legend-App/static/js/main.c89d8f51.js",
+    "main.css": "/react-legend-App/static/css/main.57cf5ed6.css",
+    "main.js": "/react-legend-App/static/js/main.34f26a94.js",
     "static/js/787.7cb1e26f.chunk.js": "/react-legend-App/static/js/787.7cb1e26f.chunk.js",
     "static/media/benimg.png": "/react-legend-App/static/media/benimg.b3131e61bf5b3c275c9f.png",
     "static/media/CALB9984.png": "/react-legend-App/static/media/CALB9984.e0eac8b55a3e8e50ae7b.png",
     "index.html": "/react-legend-App/index.html",
-    "main.31a585d7.css.map": "/react-legend-App/static/css/main.31a585d7.css.map",
-    "main.c89d8f51.js.map": "/react-legend-App/static/js/main.c89d8f51.js.map",
+    "main.57cf5ed6.css.map": "/react-legend-App/static/css/main.57cf5ed6.css.map",
+    "main.34f26a94.js.map": "/react-legend-App/static/js/main.34f26a94.js.map",
     "787.7cb1e26f.chunk.js.map": "/react-legend-App/static/js/787.7cb1e26f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.31a585d7.css",
-    "static/js/main.c89d8f51.js"
+    "static/css/main.57cf5ed6.css",
+    "static/js/main.34f26a94.js"
   ]
 }
