@@ -1,7 +1,8 @@
-import React ,{useEffect}from 'react';
+import React from 'react';
 import LandingPage from '../cardComponents/LandingPage';
 import AboutPage from './AboutPage';
 import MainNavBar from '../MainNavBar';
+import ToolsPage from './ToolsPage';
 const PageList = ({scroll}) => {
     return (
         <div className='pagelist'>
@@ -10,6 +11,7 @@ const PageList = ({scroll}) => {
             </div>
           <LandingPage/>
           <AboutPage/>
+          <ToolsPage/>
         </div>
     );
 };
